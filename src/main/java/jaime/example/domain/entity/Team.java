@@ -1,28 +1,27 @@
 package jaime.example.domain.entity;
 
+
 import lombok.*;
 
+
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@Builder
-@Table(name = "competition")
-public class competition {
+@Table(name = "team")
+public class Team {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name ="status")
-    private String status;
+    private String nationality;
 
 
 }
