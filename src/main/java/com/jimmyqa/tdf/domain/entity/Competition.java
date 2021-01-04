@@ -1,9 +1,10 @@
-package jaime.example.domain.entity;
+package com.jimmyqa.tdf.domain.entity;
 
+
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @AllArgsConstructor
@@ -16,13 +17,17 @@ public class Competition {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private  Long id;
 
-    @Column(name = "name")
+    @NotNull
     private String name;
 
-    @Column(name ="status")
-    private String status;
+    @NotNull
+    private String category;
+
+    @NotNull
+    private String state;
+
 
 
 }

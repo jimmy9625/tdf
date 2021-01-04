@@ -1,31 +1,31 @@
-package jaime.example.domain.entity;
+package com.jimmyqa.tdf.domain.entity;
 
-
+import com.sun.istack.NotNull;
 import lombok.*;
-
 
 import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
+@Setter
 @Builder
-@Table(name = "Racer")
-
+@Table(name = "racer")
 public class Racer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String nationality;
 
+    @NotNull
     private String age;
-
 
 
 }

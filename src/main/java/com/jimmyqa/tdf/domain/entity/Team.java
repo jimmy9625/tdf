@@ -1,17 +1,16 @@
-package jaime.example.domain.entity;
+package com.jimmyqa.tdf.domain.entity;
 
-
+import com.sun.istack.NotNull;
 import lombok.*;
-
 
 import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Getter
 @Setter
+@Builder
 @Table(name = "team")
 public class Team {
 
@@ -19,8 +18,10 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String nationality;
 
 
